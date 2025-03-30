@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Norway Mangorangca - Portfolio</title>
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous"
+        />
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-title">Norway's <span>Portfoilio</span></div>
+
+            <nav class="header-nav">
+                <ul class="nav-links">
+                    <li><a href="#index">Home</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#my-skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <i
+                            class="fa-solid fa-moon"
+                            id="darkModeToggle"
+                            onclick="toggleDarkMode()"
+                        ></i>
+                    </li>
+                </ul>
+                <div class="burger-menu" id="burgerMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div id="index">
+                <div class="intro">
+                    <h2>Hello there! I am</h2>
+                    <h1>Norway P. Mangorangca</h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter" id="typewriterText"></span>
+                    </div>
+                </div>
+                <img class="profile-pic" src="npm.png" alt="Profile Picture" />
+            </div>
+
+            <!-- About Me Section -->
+            <div id="about-me">
+                <h2>About Me</h2>
+                <div class="about-me-wrapper">
+                    <img
+                        src="me.png"
+                        class="profile-pic"
+                        style="border-radius: 50%; border: 3px solid gray"
+                    />
+                    <p>
+                        Hello! I'm Norway, a passionate Full-Stack Developer
+                        with experience in various technologies. I specialize in
+                        building dynamic web applications that are scalable,
+                        secure, and user-friendly. I am always eager to learn
+                        new skills and improve my craft.
+                    </p>
+                </div>
+            </div>
+
+            <div id="my-skills" style="display: none">
+                <h2>My Skills</h2>
+                <p>Here are the technologies I work with:</p>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <img src="html.png" alt="HTML" />
+                        <p>HTML</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <img src="css.png" alt="CSS" />
+                        <p>CSS</p>
+                    </div>
+                    <div class="skill-card">
+                        <img src="javascript.png" alt="JavaScript" />
+                        <p>JavaScript</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <img src="java.png" alt="Java" />
+                        <p>Java</p>
+                    </div>
+                    <div class="skill-card">
+                        <img src="python.png" alt="Python" />
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-card">
+                        <img src="vbnet.png" alt="VB.Net" />
+                        <p>VB.Net</p>
+                    </div>
+                    <div class="skill-card">
+                        <img src="php.png" alt="PHP" />
+                        <p>PHP</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <img src="laravel.png" alt="Laravel" />
+                        <p>Laravel</p>
+                    </div>
+                    <div class="skill-card">
+                        <img src="reactjs.png" alt="React JS" />
+                        <p>React JS</p>
+                    </div>
+                    <div class="skill-card">
+                        <img src="wordpress.png" alt="Word Press" />
+                        <p>WordPress</p>
+                    </div>
+                    <div class="skill-card">
+                        <img
+                            src="microsoft-office.png"
+                            alt="Microsoft Office"
+                        />
+                        <p>Microsoft Office</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="btn-about" class="active">About Me</button>
+                <button id="btn-skills">My Skills</button>
+            </div>
+
+            <!-- Projects Section -->
+            <div id="projects">
+                <h2>My Projects</h2>
+                <div class="projects-container">
+                    <div class="project-item">
+                        <img src="do_track.png" class="project-picture" />
+                        <h3>Do Track</h3>
+                        <p class="project-desc">
+                            DoTrack is a simple and efficient task manager built
+                            with PHP and MySQL, designed to help users organize
+                            and track their tasks seamlessly.
+                        </p>
+                        <div class="project-buttons">
+                            <a
+                                href="https://github.com/your-repo-link"
+                                class="btn"
+                                >Repository</a
+                            >
+                            <a
+                                href="http://dotrack.ct.ws/DoTrack/"
+                                class="btn demo"
+                                >Try Demo</a
+                            >
+                        </div>
+                        <div class="tools-used">
+                            <img src="php.png" alt="PHP" />
+                            <img src="html.png" alt="HTML" />
+                            <img src="css.png" alt="CSS" />
+                            <img src="javascript.png" alt="JavaScript" />
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="project2.png" class="project-picture" />
+                        <h3>Catchy</h3>
+                        <p class="project-desc">
+                            Note: Front-end only. Catchy is a React Native mobile application
+                            developed as a midterm project, showcasing modern
+                            mobile development practices. It features a clean
+                            UI, smooth animations, and efficient state
+                            management.
+                        </p>
+                        <div class="project-buttons">
+                            <a
+                                href="https://github.com/npmFullStack/catchy-new.git"
+                                class="btn"
+                                >Repository</a
+                            >
+                            <a href="https://expo.dev/accounts/norway012/projects/norway/builds/bd389ef5-39c6-4496-b058-85a0eedc4624" class="btn demo" download
+                                >Download APK</a
+                            >
+                        </div>
+                        <div class="tools-used">
+                            <img src="reactjs.png" alt="React Native" />
+                            <img src="javascript.png" alt="JavaScript" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact">
+                <h2>Contact Me</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
