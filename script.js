@@ -1,26 +1,3 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const icon = document.getElementById("sidebarIcon");
-    const title = document.querySelector(".sidebar h1");
-    const subtitle = document.querySelector(".sidebar h2");
-    const container = document.querySelector(".container");
-
-    sidebar.classList.toggle("minimized");
-    icon.classList.toggle("fa-chevron-right");
-    icon.classList.toggle("fa-chevron-left");
-
-    if (sidebar.classList.contains("minimized")) {
-        title.innerHTML = "<span style='color: #00ffcc;'>N</span>PM";
-        subtitle.style.display = "none";
-        container.style.marginLeft = "80px";
-    } else {
-        title.textContent = "Portfolio";
-        subtitle.textContent = "Norway's";
-        subtitle.style.display = "block";
-        container.style.marginLeft = "250px";
-    }
-}
-
 function toggleDarkMode() {
     const body = document.body;
     const darkModeIcon = document.getElementById("darkModeToggle");
