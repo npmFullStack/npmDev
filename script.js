@@ -33,42 +33,46 @@ function changeText() {
     }, 3800);
 }
 
+// Update your existing script.js with these changes
+
 document.addEventListener("DOMContentLoaded", function () {
     changeText();
 
-    document.getElementById("btn-about").addEventListener("click", function () {
+    // Function to handle section switching
+    function showAboutMe() {
         document.getElementById("about-me").style.display = "flex";
         document.getElementById("my-skills").style.display = "none";
-        this.classList.add("active");
+        document.getElementById("btn-about").classList.add("active");
         document.getElementById("btn-skills").classList.remove("active");
+    }
+
+    function showMySkills() {
+        document.getElementById("about-me").style.display = "none";
+        document.getElementById("my-skills").style.display = "flex";
+        document.getElementById("btn-skills").classList.add("active");
+        document.getElementById("btn-about").classList.remove("active");
+    }
+
+    // Button event listeners
+    document.getElementById("btn-about").addEventListener("click", showAboutMe);
+    document.getElementById("btn-skills").addEventListener("click", showMySkills);
+
+    // Nav link event listeners
+    document.querySelector('a[href="#about-me"]').addEventListener("click", function(e) {
+        e.preventDefault();
+        showAboutMe();
+        // Scroll to the section
+        document.getElementById("about-me").scrollIntoView({ behavior: "smooth" });
     });
 
-    document
-        .getElementById("btn-skills")
-        .addEventListener("click", function () {
-            document.getElementById("about-me").style.display = "none";
-            document.getElementById("my-skills").style.display = "flex";
-            this.classList.add("active");
-            document.getElementById("btn-about").classList.remove("active");
-        });
+    document.querySelector('a[href="#my-skills"]').addEventListener("click", function(e) {
+        e.preventDefault();
+        showMySkills();
+        // Scroll to the section
+        document.getElementById("my-skills").scrollIntoView({ behavior: "smooth" });
+    });
 
-    // Animate elements on scroll
-    const animateOnScroll = function () {
-        const elements = document.querySelectorAll(
-            ".project-item, .skill-card"
-        );
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-
-            if (elementPosition < screenPosition) {
-                element.style.animation = "fadeIn 0.5s forwards";
-            }
-        });
-    };
-
-    window.addEventListener("scroll", animateOnScroll);
-    animateOnScroll(); // Run once on page load
+    // ... rest of your existing code ...
 });
 
 // Add this to your existing script.js

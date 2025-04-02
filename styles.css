@@ -293,7 +293,6 @@ body {
     width: 0;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid var(--text-color);
     animation: typing 2s steps(30) 1s forwards;
     color: var(--accent-color);
 }
@@ -302,6 +301,29 @@ body {
     font-weight: bold;
     font-size: 2rem;
     margin-top: 1rem;
+    position: relative;
+    display: inline-block;
+}
+.typewriter::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    color: #fff; /* This will make it match the text color */
+    animation: blink 1s step-end infinite;
+}
+
+.dark .typewriter::after {
+    color: var(--text-color);
+}
+
+@keyframes blink {
+    from,
+    to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 .profile-pic {
