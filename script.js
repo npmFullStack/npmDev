@@ -55,22 +55,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Button event listeners
     document.getElementById("btn-about").addEventListener("click", showAboutMe);
-    document.getElementById("btn-skills").addEventListener("click", showMySkills);
+    document
+        .getElementById("btn-skills")
+        .addEventListener("click", showMySkills);
 
     // Nav link event listeners
-    document.querySelector('a[href="#about-me"]').addEventListener("click", function(e) {
-        e.preventDefault();
-        showAboutMe();
-        // Scroll to the section
-        document.getElementById("about-me").scrollIntoView({ behavior: "smooth" });
-    });
+    document
+        .querySelector('a[href="#about-me"]')
+        .addEventListener("click", function (e) {
+            e.preventDefault();
+            showAboutMe();
+            // Scroll to the section
+            document
+                .getElementById("about-me")
+                .scrollIntoView({ behavior: "smooth" });
+        });
 
-    document.querySelector('a[href="#my-skills"]').addEventListener("click", function(e) {
-        e.preventDefault();
-        showMySkills();
-        // Scroll to the section
-        document.getElementById("my-skills").scrollIntoView({ behavior: "smooth" });
-    });
+    document
+        .querySelector('a[href="#my-skills"]')
+        .addEventListener("click", function (e) {
+            e.preventDefault();
+            showMySkills();
+            // Scroll to the section
+            document
+                .getElementById("my-skills")
+                .scrollIntoView({ behavior: "smooth" });
+        });
 
     // ... rest of your existing code ...
 });
